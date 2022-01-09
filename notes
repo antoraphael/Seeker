@@ -1,0 +1,33 @@
+GLOBAL    --------------------------------------------
+
+node -v
+npm -v
+git --version
+npm i -g express body-parser concurrently
+
+
+SEEKER    --------------------------------------------
+git enabled
+
+
+
+FRONT END --------------------------------------------
+
+npx create-react-app my-app
+npm start
+
+dependencies :----
+npm i react-router-dom
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @mui/styled-engine-sc styled-components
+npm install @mui/icons-material
+
+
+
+BACK END  ---------------------------------------------
+
+npm init -y
+npm i --save-dev nodemon
+
+dependencies :----
+npm i express body-parser concurrently
