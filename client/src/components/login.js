@@ -4,6 +4,7 @@ import { Button, Form, Label } from 'react-bootstrap';
 
 const LoginPage = () => {
 return(
+    <div className='box'>
 <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -20,10 +21,11 @@ return(
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
-  <Button variant="primary" type="submit">
+  <Button variant="primary" type="submit" href='/funcomp'>
     Submit
   </Button>
 </Form>
+</div>
 );
 
 }
