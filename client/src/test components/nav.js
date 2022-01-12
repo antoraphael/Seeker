@@ -5,18 +5,21 @@ const NavBar = () => {
     return(
 <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="/funcomp">Functional comp</Navbar.Brand>
+    {/* <Navbar.Brand href="#">Demo1</Navbar.Brand> */}
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        {/* <Nav.Link href="#">Demo2</Nav.Link> */}
+        <NavDropdown title="Fun comp" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/funcomp">UseState</NavDropdown.Item>
+          <NavDropdown.Item href="/effectHook">useEffect</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+        <NavDropdown title="Cls comp" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/lifecycle">Lifecycle</NavDropdown.Item>
+
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>

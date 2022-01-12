@@ -1,8 +1,10 @@
 import './App.css';
 import LoginPage from './components/login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FunComp from './test components/functionalComponents';
+import FunComp from './test components/Functional components/functionalComponents';
+import EffectHook from './test components/Functional components/effectHook';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import LifecycleDemo from './test components/class components/lifecycle';
 
 
 function App() {
@@ -16,8 +18,9 @@ function App() {
         <Routes>
               <Route path="/" element={<LoginPage />} />
               <Route path="/funcomp" element={<FunComp />} />
-              {/* <Route path="/products" element={<Products />} />
-              <Route path="/newProduct" element={<AddProducts />} /> */}
+               <Route path="/effectHook" element={<EffectHook />} /> 
+               <Route path="/lifecycle" element={<LifecycleDemo />} /> 
+               {/* <Route path="/newProduct" element={<AddProducts />} />  */}
             </Routes>
         </div>
       </header>

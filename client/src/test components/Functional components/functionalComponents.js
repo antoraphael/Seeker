@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Button, Table } from 'react-bootstrap';
-import NavBar from "./nav";
+import NavBar from "../nav";
 
 const FunComp = () => {
     const [test, setTest] = useState();
+    const [count, setCount] = useState(0);
 
     return(
      
         <div>
            <NavBar/>
+  <div><p className="h2 pb-3">React useState</p></div>         
  <Button variant="outline-primary" onClick = {() => setTest(!test)}>
           Click Here!
         </Button>
@@ -71,7 +73,15 @@ const FunComp = () => {
   </tbody>
 </Table>
 
+
+
 }
+<div className="pt-5">
+      <p>You clicked {count} times</p>
+      <Button variant="outline-primary" onClick={() => setCount(count + 1)}>
+        Click me
+      </Button>
+    </div>
         </div>
 
     );
