@@ -1,33 +1,59 @@
 import React from "react";
 import NavBar from "../nav";
-import { Button } from 'react-bootstrap';
-
-
+import { Button } from "react-bootstrap";
+import Counter from "./counter";
 
 export default class LifecycleDemo extends React.Component {
-constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-        counter: 0
-    }
+      mount: true,
+      ignorProp: 0,
+      seed: 40,
+      showErrorComponent: false,
+    };
 
-    this.increment = () => this.setState({counter: this.state.counter+1});
-    this.decrement = () => this.setState({counter: this.state.counter-1});
-}
+    this.mount = () => this.setState({ mount: true });
+    this.unmount = () => this.setState({ mount: false });
 
-    render() {
-      return (
-          <div>
-      <NavBar />
-      <div className="mt-3"></div>
-      <Button variant="outline-primary" onClick = {this.increment}>increment</Button>
-      <Button variant="outline-secondary" onClick = {this.decrement}>decrement</Button>
-
-<p className="pt-5">count  {this.state.counter}</p>
-
-      </div>
-      );
-    }
+    this.ignoreProp = () => this.setState({ ignoreProp: Math.random() });
+    this.seed = () => this.setState({ seed: Number.parseInt(Math.random() * 100) });
+    this.toogleError = () => this.setState({showErrorComponent: !this.state.showErrorComponent})
   }
- 
+
+  render() {
+    return (
+      <div>
+        <NavBar />
+
+        <div className="pb-3">
+          <Button variant="outline-primary" onClick={this.mount}>
+            mount
+          </Button>
+          <Button variant="outline-secondary" onClick={this.unmount}>
+            unmount
+          </Button>
+          <Button variant="outline-secondary" onClick={this.ignoreProp}>
+            ignore
+          </Button>
+          <Button variant="outline-secondary" onClick={this.seed}>
+            seed
+          </Button>
+          <Button variant="outline-secondary" onClick={this.toogleError}>
+            toogle error
+          </Button>
+        </div>
+        <div>
+          {this.state.mount ? (
+            <Counter
+              seed={this.state.seed}
+              ignoreProp={this.state.ignoreProp}
+              showErrorComponent={this.state.showErrorComponent}
+            />
+          ) : null}
+        </div>
+      </div>
+    );
+  }
+}

@@ -9,7 +9,7 @@ const NavBar = () => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        {/* <Nav.Link href="#">Demo2</Nav.Link> */}
+        <Nav.Link href="/">Home</Nav.Link>
         <NavDropdown title="Fun comp" id="basic-nav-dropdown">
           <NavDropdown.Item href="/funcomp">UseState</NavDropdown.Item>
           <NavDropdown.Item href="/effectHook">useEffect</NavDropdown.Item>

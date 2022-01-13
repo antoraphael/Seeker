@@ -6,7 +6,6 @@ import EffectHook from './test components/Functional components/effectHook';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import LifecycleDemo from './test components/class components/lifecycle';
 
-
 function App() {
   return (
     <Router>
