@@ -19,6 +19,7 @@ const NavBar = () => {
         </NavDropdown>
         <NavDropdown title="Cls comp" id="basic-nav-dropdown">
           <NavDropdown.Item href="/lifecycle">Lifecycle</NavDropdown.Item>
+          <NavDropdown.Item href="/hocmain">Highorder</NavDropdown.Item>
 
         </NavDropdown>
       </Nav>

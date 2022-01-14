@@ -5,6 +5,8 @@ import FunComp from './test components/Functional components/functionalComponent
 import EffectHook from './test components/Functional components/effectHook';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import LifecycleDemo from './test components/class components/lifecycle';
+import HocMain from './test components/Highorder components/hocMain';
+
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
               <Route path="/funcomp" element={<FunComp />} />
                <Route path="/effectHook" element={<EffectHook />} /> 
                <Route path="/lifecycle" element={<LifecycleDemo />} /> 
+               <Route path="/hocmain" element={<HocMain />} /> 
+
+          
+
+
                {/* <Route path="/newProduct" element={<AddProducts />} />  */}
             </Routes>
         </div>
