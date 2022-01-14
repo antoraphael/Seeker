@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import LifecycleDemo from "./test components/class components/lifecycle";
 import HocMain from "./test components/Highorder components/hocMain";
 import ParentComp from "./test components/pure components/parentComp";
+import Usemem from "./test components/Functional components/usemem";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/lifecycle" element={<LifecycleDemo />} />
               <Route path="/hocmain" element={<HocMain />} />
               <Route path="/purecomp" element={<ParentComp />} />
+              <Route path="/usemem" element={<Usemem />} />
 
               {/* <Route path="/newProduct" element={<AddProducts />} />  */}
             </Routes>

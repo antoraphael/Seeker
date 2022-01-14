@@ -3,7 +3,7 @@ import PureComp from "./pureComp";
 import RegularComp from "./regularComp";
 import NavBar from "../nav";
 
-class ParentComp extends React.Component {
+class ParentComp extends Component {
   constructor(props) {
     super(props);
 
