@@ -1,10 +1,9 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-const ErrorComponent = () => {
-    <div>{props.ignore}</div>
-}
-
+// const ErrorComponent = () => {
+//   <div>{props.ignore}</div>;
+// };
 
 export default class Counter extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ export default class Counter extends React.Component {
     this.increment = () => this.setState({ counter: this.state.counter + 1 });
     this.decrement = () => this.setState({ counter: this.state.counter - 1 });
   }
-
 
   // Lifecycle components ---------------------
   componentDidMount() {
@@ -43,12 +41,11 @@ export default class Counter extends React.Component {
     return true;
   }
 
-    
   componentDidCatch(error, info) {
     console.log("componet did catch error");
 
-    this.setState({error, info})
-  } 
+    this.setState({ error, info });
+  }
   static getDerivedStateFromProps(props, state) {
     if (props.seed && state.seed !== props.seed) {
       return {
@@ -59,14 +56,12 @@ export default class Counter extends React.Component {
     return null;
   }
 
-
   render() {
-      console.log("Render", this.state.error);
-    if(this.props.showErrorComponent && this.state.error){
-       return <div>An error has occured : {this.state.error.message}</div>
+    console.log("Render", this.state.error);
+    if (this.props.showErrorComponent && this.state.error) {
+      return <div>An error has occured : {this.state.error.message}</div>;
     }
     return (
-      
       <div>
         <div className="mt-3"></div>
         <Button variant="outline-primary" onClick={this.increment}>
@@ -77,10 +72,8 @@ export default class Counter extends React.Component {
         </Button>
 
         <p className="pt-5">count {this.state.counter}</p>
-        {this.props.showErrorComponent ? <ErrorComponent /> : null }
+        {/* {this.props.showErrorComponent ? <ErrorComponent /> : null } */}
       </div>
     );
   }
-
-
 }

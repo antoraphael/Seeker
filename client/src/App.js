@@ -8,6 +8,7 @@ import LifecycleDemo from "./test components/class components/lifecycle";
 import HocMain from "./test components/Highorder components/hocMain";
 import ParentComp from "./test components/pure components/parentComp";
 import Usemem from "./test components/Functional components/usemem";
+import SignupA from "./components/signup";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
 
             <Routes>
               <Route path="/" element={<LoginPage />} />
+              <Route path="/signupa" element={<SignupA />} />
+
               <Route path="/funcomp" element={<FunComp />} />
               <Route path="/effectHook" element={<EffectHook />} />
               <Route path="/lifecycle" element={<LifecycleDemo />} />
