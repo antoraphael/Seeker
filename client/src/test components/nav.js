@@ -3,13 +3,15 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="mb-5">
       <Container>
         {/* <Navbar.Brand href="#">Demo1</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/formik">formik</Nav.Link>
+
             <NavDropdown title="Fun comp" id="basic-nav-dropdown">
               <NavDropdown.Item href="/funcomp">UseState</NavDropdown.Item>
               <NavDropdown.Item href="/effectHook">useEffect</NavDropdown.Item>
@@ -23,6 +25,11 @@ const NavBar = () => {
               <NavDropdown.Item href="/lifecycle">Lifecycle</NavDropdown.Item>
               <NavDropdown.Item href="/hocmain">Highorder</NavDropdown.Item>
               <NavDropdown.Item href="/purecomp">Pure Comp</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="State managment" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/statemovs">Movies</NavDropdown.Item>
+              <NavDropdown.Item href="/statemov">Movie</NavDropdown.Item>
+              <NavDropdown.Item href="/">Pure Comp</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

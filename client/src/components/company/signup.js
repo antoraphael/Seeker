@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form, Label } from "react-bootstrap";
-import "../resuable/style.css";
+import "../../resuable/style.css";
+import { Link } from "react-router-dom";
 
-const SignupA = () => {
+const CompSignup = () => {
   const initialValues = { username: "", email: "", password: "" };
   const [formValue, setFormValue] = useState(initialValues);
   const [formError, setFormError] = useState({});
@@ -52,6 +53,7 @@ const SignupA = () => {
 
   return (
     <div>
+      <p className="h2 p-3">Sign up</p>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>User name</Form.Label>
@@ -92,9 +94,10 @@ const SignupA = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button>
+        <Link to="/">signup</Link>
       </Form>
     </div>
   );
 };
 
-export default SignupA;
+export default CompSignup;

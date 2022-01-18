@@ -1,3 +1,9 @@
 .text-error {
   color: rgb(194, 63, 63);
 }
+
+.error-feedback {
+  color: rgb(194, 63, 63);
+  position: absolute;
+  font-size: 0.8rem;
+}
