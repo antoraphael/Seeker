@@ -9,25 +9,28 @@ import HocMain from "./test components/Highorder components/hocMain";
 import ParentComp from "./test components/pure components/parentComp";
 import Usemem from "./test components/Functional components/usemem";
 import CompSignup from "./components/company/signup";
-import Basic from "./test components/validations/formik";
+import Basic from "./test components/Validations/formik";
 import UserLogin from "./components/user/userLogin";
-import StateMovies from "./test components/state managment/movies";
-import StateMovie from "./test components/state managment/movie";
-import { MovieList } from "./test components/state managment/movieContext";
-
+import StateMovies from "./test components/State managment/movies";
+import StateMovie from "./test components/State managment/movie";
+import { MovieList } from "./test components/State managment/movieContext";
+import DemoIndexRedux from "./test components/Redux/demIndexRe";
+import ReduxIndex from "./test components/Redux/ReIndex";
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <div className="container-fluid">
-            {/* <LoginPage/> */}
+            <Routes>
+              <Route path="/" element={<CompLogin />} />
+              <Route path="/signupa" element={<CompSignup />} />
+              <Route path="/userlogin" element={<UserLogin />} />
+              {/* <Route path="/newProduct" element={<AddProducts />} />  */}
+            </Routes>
+            {/*Practice Compoenets------------------------------------------------- */}
             <MovieList>
               <Routes>
-                <Route path="/" element={<CompLogin />} />
-                <Route path="/signupa" element={<CompSignup />} />
-                <Route path="/userlogin" element={<UserLogin />} />
-
                 <Route path="/funcomp" element={<FunComp />} />
                 <Route path="/effectHook" element={<EffectHook />} />
                 <Route path="/lifecycle" element={<LifecycleDemo />} />
@@ -37,8 +40,8 @@ function App() {
                 <Route path="/formik" element={<Basic />} />
                 <Route path="/statemovs" element={<StateMovies />} />
                 <Route path="/statemov" element={<StateMovie />} />
-
-                {/* <Route path="/newProduct" element={<AddProducts />} />  */}
+                <Route path="/dreindex" element={<DemoIndexRedux />} />
+                <Route path="/reindex" element={<ReduxIndex />} />
               </Routes>
             </MovieList>
           </div>

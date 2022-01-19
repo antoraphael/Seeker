@@ -27,9 +27,11 @@ const NavBar = () => {
               <NavDropdown.Item href="/purecomp">Pure Comp</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="State managment" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/statemovs">Movies</NavDropdown.Item>
-              <NavDropdown.Item href="/statemov">Movie</NavDropdown.Item>
-              <NavDropdown.Item href="/">Pure Comp</NavDropdown.Item>
+              <NavDropdown.Item href="/statemovs">Simple</NavDropdown.Item>
+              <NavDropdown.Item href="/reindex">Redux</NavDropdown.Item>
+              <NavDropdown.Item href="/dreindex">
+                redux concept
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
