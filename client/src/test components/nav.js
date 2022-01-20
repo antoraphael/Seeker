@@ -11,6 +11,7 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/formik">formik</Nav.Link>
+            <Nav.Link href="/mainaxios">axios</Nav.Link>
 
             <NavDropdown title="Fun comp" id="basic-nav-dropdown">
               <NavDropdown.Item href="/funcomp">UseState</NavDropdown.Item>

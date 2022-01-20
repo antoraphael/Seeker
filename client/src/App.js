@@ -16,6 +16,8 @@ import StateMovie from "./test components/State managment/movie";
 import { MovieList } from "./test components/State managment/movieContext";
 import DemoIndexRedux from "./test components/Redux/demIndexRe";
 import ReduxIndex from "./test components/Redux/ReIndex";
+import MainAxios from "./test components/axios/axios";
+
 function App() {
   return (
     <Router>
@@ -42,6 +44,7 @@ function App() {
                 <Route path="/statemov" element={<StateMovie />} />
                 <Route path="/dreindex" element={<DemoIndexRedux />} />
                 <Route path="/reindex" element={<ReduxIndex />} />
+                <Route path="/mainaxios" element={<MainAxios />} />
               </Routes>
             </MovieList>
           </div>
