@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Form, Label } from "react-bootstrap";
 import "../../resuable/style.css";
 import { Link } from "react-router-dom";
+import image from "../../resuable/images/png.png";
 
 const CompSignup = () => {
   const initialValues = { username: "", email: "", password: "" };
@@ -52,51 +53,77 @@ const CompSignup = () => {
   };
 
   return (
-    <div>
-      <p className="h2 p-3">Sign up</p>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>User name</Form.Label>
-          <Form.Control
-            name="username"
-            placeholder="User name"
-            value={formValue.username}
-            onChange={handleChange}
-          />
-          <Form.Text className="text-error">{formError.username}</Form.Text>
-        </Form.Group>
+    <section className="vh-100">
+      <div className="container-fluid h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-md-9 col-lg-6 col-xl-5">
+            <img src={image} className="img-fluid" alt="Sample image" />
+          </div>
+          <div
+            className="card p-4 col-md-8 col-lg-6 col-xl-4 offset-xl-1"
+            style={{
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+            }}
+          >
+            {/* <Link to="/formik">Formik</Link> study */}
+            <h1 className=" fw-normal mb-3 me-3">Login</h1>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>User name</Form.Label>
+                <Form.Control
+                  name="username"
+                  placeholder="User name"
+                  value={formValue.username}
+                  onChange={handleChange}
+                />
+                <Form.Text className="text-error">
+                  {formError.username}
+                </Form.Text>
+              </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            name="email"
-            placeholder="Enter email"
-            value={formValue.email}
-            onChange={handleChange}
-          />
-          <Form.Text className="text-error">{formError.email}</Form.Text>
-        </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  name="email"
+                  placeholder="Enter email"
+                  value={formValue.email}
+                  onChange={handleChange}
+                />
+                <Form.Text className="text-error">{formError.email}</Form.Text>
+              </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            name="password"
-            type="password"
-            placeholder="Password"
-            value={formValue.password}
-            onChange={handleChange}
-          />
-          <Form.Text className="text-error">{formError.password}</Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-        <Link to="/">signup</Link>
-      </Form>
-    </div>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  value={formValue.password}
+                  onChange={handleChange}
+                />
+                <Form.Text className="text-error">
+                  {formError.password}
+                </Form.Text>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Check me out" />
+              </Form.Group>
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+              <div className="text-center text-lg-start mt-4 pt-2">
+                <p className="small fw-bold mt-2 pt-1 mb-0">
+                  Already have an account?
+                  <Link to="/" className="link-primary m-1">
+                    Login
+                  </Link>
+                </p>
+              </div>
+            </Form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -20,9 +20,40 @@ export const MovieList = (props) => {
       year: "2021",
     },
   ]);
+
   return (
-    <MovieContext.Provider value={[movies, setMovies]}>
-      {props.children}
-    </MovieContext.Provider>
+    <div>
+      <MovieContext.Provider value={[movies, setMovies]}>
+        {props.children}
+      </MovieContext.Provider>
+    </div>
   );
 };
+
+// export const SeriesContext = createContext();
+
+// export const SeriesList = (props) => {
+//   const [series, setSeries] = useState([
+//     {
+//       name: "series 1",
+//       id: "345",
+//       year: "2011",
+//     },
+//     {
+//       name: "series 2",
+//       id: "543",
+//       year: "2061",
+//     },
+//     {
+//       name: "series 3",
+//       id: "7645",
+//       year: "2021",
+//     },
+//   ]);
+
+//   return (
+//     <SeriesContext.Provider value={[series, setSeries]}>
+//       {props.children}
+//     </SeriesContext.Provider>
+//   );
+// };

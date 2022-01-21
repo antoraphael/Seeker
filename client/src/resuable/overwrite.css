@@ -1,0 +1,36 @@
+.list-group-item {
+  padding: 1rem 1rem !important;
+}
+
+.list-group-item.active {
+  background-color: #7db1ff !important;
+  border-color: #7db1ff !important;
+}
+.list-group {
+  border-radius: unset !important;
+}
+
+.offcanvas-body {
+  padding: 0px !important;
+}
+
+label {
+  font-size: 19px !important;
+  padding-left: 3px !important;
+}
+
+.form-check {
+  display: flex !important;
+}
+
+.small {
+  font-size: 15px !important;
+}
+
+.fw-bold {
+  font-weight: 500 !important;
+}
+
+.card {
+  border: 0px !important;
+}

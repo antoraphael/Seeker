@@ -17,6 +17,11 @@ import { MovieList } from "./test components/State managment/movieContext";
 import DemoIndexRedux from "./test components/Redux/demIndexRe";
 import ReduxIndex from "./test components/Redux/ReIndex";
 import MainAxios from "./test components/axios/axios";
+import CompList from "./components/company/compList";
+import Hire from "./components/company/hire";
+import UserSignup from "./components/user/userSignup";
+import UserList from "./components/user/userList";
+import UserNav from "./components/user/userNav";
 
 function App() {
   return (
@@ -27,7 +32,12 @@ function App() {
             <Routes>
               <Route path="/" element={<CompLogin />} />
               <Route path="/signupa" element={<CompSignup />} />
+              <Route path="/complist" element={<CompList />} />
+              <Route path="/hire" element={<Hire />} />
               <Route path="/userlogin" element={<UserLogin />} />
+              <Route path="/usersingup" element={<UserSignup />} />
+              <Route path="/userlist" element={<UserList />} />
+              <Route path="/usernav" element={<UserNav />} />
               {/* <Route path="/newProduct" element={<AddProducts />} />  */}
             </Routes>
             {/*Practice Compoenets------------------------------------------------- */}

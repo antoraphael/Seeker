@@ -7,6 +7,7 @@ import AddMovies from "./addMovie";
 
 const StateMovies = () => {
   const [movies, setMovies] = useContext(MovieContext);
+  // const [series, setSeries] = useContext(SeriesContext);
 
   return (
     <div>
@@ -23,6 +24,15 @@ const StateMovies = () => {
             <StateMovie name={movie.name} year={movie.year} key={movie.id} />
           ))}
         </div>
+        {/* <div className="col-md-6">
+          {series.map((serial) => (
+            <div>
+              <p>Movie name: {serial.name}</p>
+              <p>released date: {serial.year}</p>
+            </div>
+            // <StateMovie name={movie.name} year={movie.year} key={movie.id} />
+          ))}
+        </div> */}
         <div className="col-md-6">
           <AddMovies />
         </div>
